@@ -11,8 +11,9 @@ aboveN <- function(x, n = 10){
 }
 
 colMean <- function(x){
-    result <- numeric(ncol(x))
-    for (i in 1:ncol(x)){
+    col <- ncol(x)
+    result <- numeric(col)
+    for (i in 1:col){
         result[i] <- mean(x[, i], na.rm = TRUE)
     }
     result
